@@ -1,14 +1,14 @@
 export const config = {
-  'username': 'vinh',
-  'password': 'Vinh2981995',
-  'database': 'vinhproject3',
-  'host': 'vinhproject3.cnzjqjlih9cp.us-east-1.rds.amazonaws.com',
+  'username': process.env.POSTGRES_USERNAME,
+  'password': process.env.POSTGRES_PASSWORD,
+  'database': process.env.POSTGRES_DB,
+  'host': process.env.POSTGRES_HOST,
   'dialect': 'postgres',
-  'aws_region': 'us-east-1',
-  'aws_profile': 'default',
-  'aws_media_bucket': 'project3-vinh-dev',
-  'url': 'http://localhost:8100',
+  'aws_region': process.env.AWS_REGION,
+  'aws_profile': process.env.AWS_PROFILE,
+  'aws_media_bucket': process.env.AWS_BUCKET,
+  'url': process.env.URL,
   'jwt': {
-    'secret': 'vinh-dev',
+    'secret': process.env.JWT_SECRET,
   },
 };
